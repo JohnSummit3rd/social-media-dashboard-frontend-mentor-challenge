@@ -1,0 +1,340 @@
+/*
+==================================
+SHARED CSS PROPERTIES
+==================================
+*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: "Inter", serif;
+    font-weight: 700;
+    color: white;
+}
+
+p {
+    font-size: 14px;
+    color: hsl(228, 34%, 66%);
+    font-weight: 700;
+}
+
+/*
+==================================
+CSS HEADER PROPERTIES
+==================================
+*/
+
+.container {
+    height: 2550px;
+    background-color: hsl(230, 17%, 14%);
+    padding: 8% 5%;
+}
+
+#total-followers {
+    margin-top: 5px;
+}
+
+hr {
+    margin-top: 20px;
+    border: solid 1px hsl(228, 12%, 44%);
+    opacity: 0.2;
+}
+
+/*
+==================================
+CSS TOGGLE PROPERTIES
+==================================
+*/
+
+.darkmode-toggle {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.button {
+    background: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+    width: 50px;
+    height: 25px;
+    border-radius: 200px;
+    cursor: pointer;
+    position: relative;
+    transition: 0.6s;  
+}
+
+.button::before {
+    position: absolute;
+    content: '';
+    background-color: hsl(230, 17%, 14%);
+    width: 20px;
+    height: 20px;
+    border-radius: 200px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-top: 2.5px;
+    transition: 0.6s;
+}
+input:checked + .button {
+    background-color: grey;
+}
+
+input:checked + .button::before {
+    transform: translateX(20px);
+}
+
+input {
+    display: none;
+}
+
+/*
+==================================
+CSS LIGHTMODE PROPERTIES
+==================================
+*/
+
+.white-container {
+    background-color: white;
+    color: black;
+}
+
+.white-stats {
+    background-color: hsl(227, 47%, 96%) !important;
+}
+
+.instagram-white {
+    border-top: double 3px transparent !important;
+    background-image: linear-gradient(hsl(227, 47%, 96%), hsl(227, 47%, 96%)), linear-gradient(to right,hsl(37, 97%, 70%), hsl(329, 70%, 58%)) !important;
+    background-origin: border-box !important;
+    background-clip: content-box, border-box !important;
+}
+
+.white-analytics-card {
+    background-color: hsl(227, 47%, 96%) !important;
+}
+
+.color-green p {
+    color: hsl(163, 72%, 41%) !important; 
+}
+/*
+==================================
+CSS DARKMODE-TOGGLE PROPERTIES
+==================================
+*/
+
+.darkmode-toggle {
+    margin-top: 20px;
+}
+
+/*
+==================================
+CSS SOCIAL-STATS PROPERTIES
+==================================
+*/
+
+.stats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 250px;
+    background-color: hsl(228, 28%, 20%);
+    margin-top: 30px;
+    border-radius: 5px;
+}
+
+#facebook-stats {
+    border-top: solid 3px hsl(208, 92%, 53%);
+}
+
+#facebook-title,
+#twitter-title,
+#instagram-title,
+#youtube-title {
+    margin-top: 30px;
+    display: flex;
+}
+
+#facebook-title img, 
+#twitter-title img,
+#instagram-title img,
+#youtube-title img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    margin-top: -1px;
+}
+
+.stats h1 {
+    font-size: 68px;
+    margin-top: 20px;
+}
+
+.stats h4 {
+    font-weight: 400;
+    color: hsl(228, 34%, 66%);
+    letter-spacing: 5px;
+}
+
+#fb-details, 
+#twitter-details, 
+#instagram-details,
+#youtube-details {
+    display: flex;
+    margin-top: 30px;
+    opacity: 0.7;
+}
+
+#fb-details p {
+    color: white;
+}
+
+#twitter-details p, 
+#instagram-details p {
+    color: hsl(163, 72%, 41%);
+}
+
+#youtube-details p {
+    color: hsl(356, 69%, 56%);
+}
+
+#fb-details img,
+#twitter-details img,
+#instagram-details img, 
+#youtube-details img {
+    width: 10px;
+    height: 5px;
+    margin-right: 5px;
+    margin-top: 6px;
+}
+
+#twitter-stats {
+    border-top: solid 3px hsl(203, 89%, 53%);
+}
+
+#instagram-stats {
+    border-top: double 3px transparent;
+    background-image: linear-gradient(hsl(228, 28%, 20%), hsl(228, 28%, 20%)), linear-gradient(to right,hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+
+#youtube-stats {
+    border-top: solid 3px hsl(348, 97%, 39%);
+}
+
+/*
+==================================
+CSS ANALYTICS PROPERTIES
+==================================
+*/
+
+.analytics {
+    margin-top: 40px;
+}
+
+.analytics-card {
+    width: 100%;
+    height: 125px;
+    background-color: hsl(228, 28%, 20%);
+    margin-top: 20px;
+    border-radius: 5px;
+    padding: 8%;
+}
+
+.social-analytics {
+    display: flex;
+    justify-content: space-between;
+}
+
+.analytics-stats {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.analytics-percentage {
+    display: flex;
+    margin-top: 10px;
+}
+
+.analytics-percentage img {
+    width: 10px;
+    height: 5px;
+    margin-top: 6px;
+    margin-right: 5px;
+}
+
+.analytics-green {
+    color: hsl(163, 72%, 41%);
+    font-size: 10px;
+    margin-top: 3px;
+}
+
+.analytics-red {
+    color: hsl(356, 69%, 56%);
+    font-size: 10px;
+    margin-top: 3px;
+}
+
+/*
+==================================
+CSS BREAKPOINT PROPERTIES
+==================================
+*/
+
+@media (min-width: 1440px) {
+    .container {
+        width: 100%;
+        height: 100vh;
+        padding: 3% 10%;
+    }
+
+    hr {
+        display: none;
+    }
+
+    .desktop-upper {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .darkmode-toggle {
+        width: 150px;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .social-stats {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    .stats {
+        width: 23%;
+    }
+
+    .analytics-upper {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+    }
+
+    .analytics-lower {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .analytics-card {
+        width: 23%;
+        padding: 2%;
+    }
+}
